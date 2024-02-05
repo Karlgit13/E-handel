@@ -1,8 +1,9 @@
-body {
-  padding: 0;
+* {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
+}
+
+body {
+  margin: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,17 +12,4 @@ body {
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-@font-face {
-  font-family: "Karla";
-  src: url("./assets/Karla.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "MarkaziText";
-  src: url("./assets/MarkaziText.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Poppins";
-  src: url("./assets/Poppins-Regular.ttf");
 }
