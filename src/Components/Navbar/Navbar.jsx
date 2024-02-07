@@ -12,8 +12,12 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo} alt="logo" />
-        <p>E-HANDEL</p>
+        <a href="/">
+          <img src={logo} alt="logo" />
+        </a>
+        <a style={{ textDecoration: "none" }} href="/">
+          <p>E-HANDEL</p>
+        </a>
       </div>
       <ul className="nav-menu">
         <li
