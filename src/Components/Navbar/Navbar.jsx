@@ -8,6 +8,7 @@ import barsSolid from "../../Assets/bars-solid.svg";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
+  // eslint-disable-next-line
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { getTotalCartItems } = useContext(ShopContext);
 
@@ -15,10 +16,10 @@ const Navbar = () => {
     <div className="navbar">
       <div className="nav-logo">
         <a href="/">
-          <img src={logo} alt="logo" />
+          <img className="navImg" src={logo} alt="logo" />
         </a>
         <a style={{ textDecoration: "none" }} href="/">
-          <p>E-HANDEL</p>
+          <p className="nav-title">E-Commerce</p>
         </a>
       </div>
       <ul className="nav-menu">

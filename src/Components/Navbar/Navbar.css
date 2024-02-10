@@ -78,21 +78,29 @@
 
 @media (max-width: 992px) {
   .bars-solid {
-    width: 50px;
+    width: 35px;
+    margin-right: 2rem;
+  }
+  .navImg {
+    width: 40px;
   }
   .navbar {
     margin: 0;
-
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 16px;
     align-items: center;
+    height: 3rem;
   }
   .nav-menu {
     display: none;
   }
   .nav-login-cart {
     display: none;
+  }
+  .nav-title {
+    font-weight: 600;
   }
 }

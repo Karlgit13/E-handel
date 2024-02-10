@@ -5,20 +5,51 @@
   gap: 10px;
   height: 90vh;
 }
-.popular h1{
-    color: #171717;
-    font-size: 50px;
-    font-weight: 600;
-
+.popular h1 {
+  color: #171717;
+  font-size: 50px;
+  font-weight: 600;
 }
 .popular hr {
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background: #252525;
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
 }
 .popular-item {
-    margin-top: 50px;
-    display: flex;
-    gap: 30px;
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .popular {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Updated */
+    justify-items: center;
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+  }
+  .popular-item {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+  }
+  .popular img {
+    width: 30%; /* Updated */
+    height: auto;
+  }
+  .popular p {
+    font-weight: 500;
+    font-size: 1rem;
+    display: none;
+  }
+  .popular h1 {
+    font-size: 1rem;
+    color: #171717;
+    font-weight: 600;
+  }
 }
