@@ -8,9 +8,12 @@ import barsSolid from "../../Assets/bars-solid.svg";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
-  // eslint-disable-next-line
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { getTotalCartItems } = useContext(ShopContext);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="navbar">
@@ -28,9 +31,7 @@ const Navbar = () => {
             setMenu("shop");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/">
-            Shop
-          </Link>
+          <Link to="/">Shop</Link>
           {menu === "shop" ? <hr /> : <></>}
         </li>
         <li
@@ -38,9 +39,7 @@ const Navbar = () => {
             setMenu("mens");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/mens">
-            Men
-          </Link>
+          <Link to="/mens">Men</Link>
           {menu === "mens" ? <hr /> : <></>}
         </li>
         <li
@@ -48,20 +47,14 @@ const Navbar = () => {
             setMenu("women");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/womens">
-            Women
-          </Link>{" "}
-          {menu === "women" ? <hr /> : <></>}
+          <Link to="/womens">Women</Link> {menu === "women" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("kids");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/kids">
-            Kids
-          </Link>{" "}
-          {menu === "kids" ? <hr /> : <></>}
+          <Link to="/kids">Kids</Link> {menu === "kids" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login-cart">
@@ -73,8 +66,24 @@ const Navbar = () => {
         </Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
-      <div className="burger-menu">
+      <div className="burger-menu" onClick={toggleMenu}>
         <img className="bars-solid" src={barsSolid} alt="barsSolid" />
+        {isMenuOpen && (
+          <div className="dropdown-menu">
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Shop
+            </Link>
+            <Link to="/mens" onClick={() => setIsMenuOpen(false)}>
+              Men
+            </Link>
+            <Link to="/womens" onClick={() => setIsMenuOpen(false)}>
+              Women
+            </Link>
+            <Link to="/kids" onClick={() => setIsMenuOpen(false)}>
+              Kids
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
