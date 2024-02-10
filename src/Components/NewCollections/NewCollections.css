@@ -31,6 +31,7 @@
     display: grid;
     height: auto;
     padding: 15px 0px;
+    place-items: center;
   }
   .new-collections h1 {
     color: #171717;

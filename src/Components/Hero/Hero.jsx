@@ -8,7 +8,6 @@ const Hero = () => {
   return (
     
     <div className="hero">
-      <img src={arrow_icon} alt="Test Arrow" style={{ width: '100px' }} />
       <div className="hero-left">
         <h2>NEW ARRIVALS ONLY</h2>
         <div>
