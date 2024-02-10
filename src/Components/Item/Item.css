@@ -29,6 +29,7 @@
 @media (max-width: 992px) {
   .item {
     width: 100vw;
+    max-width: 100%;
   }
   .item-prices {
     display: flex;

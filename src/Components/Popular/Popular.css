@@ -34,7 +34,7 @@
     grid-template-columns: 200px 200px;
   }
   .popular img {
-    width: 50%;
+    width: 100%;
   }
   .popular hr {
     display: none;
