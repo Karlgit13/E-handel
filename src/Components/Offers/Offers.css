@@ -49,6 +49,7 @@
   .offers {
     width: 100vw;
     height: 60vh;
+    padding: 15px 0px;
     display: flex;
     background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
   }

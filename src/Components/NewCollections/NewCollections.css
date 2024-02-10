@@ -30,10 +30,11 @@
     width: 100vw;
     display: grid;
     height: auto;
+    padding: 15px 0px;
   }
   .new-collections h1 {
     color: #171717;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-top: 30px;
     margin-bottom: -35px;
     font-weight: 600;

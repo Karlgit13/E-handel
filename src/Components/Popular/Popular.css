@@ -28,6 +28,7 @@
   .popular {
     display: grid;
     width: 100vw;
+    padding: 15px 0;
   }
   .popular-item {
     display: grid;
