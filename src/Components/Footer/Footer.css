@@ -62,7 +62,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 15px;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid grey;
   }
   .footer-logo {
     display: flex;
