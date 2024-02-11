@@ -82,6 +82,9 @@ const Navbar = () => {
             <Link to="/kids" onClick={() => setIsMenuOpen(false)}>
               Kids
             </Link>
+            <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+              Login
+            </Link>
           </div>
         )}
       </div>
