@@ -31,6 +31,7 @@
     width: 100vw;
     max-width: 100%;
   }
+
   .item-prices {
     display: flex;
     gap: 10px;
@@ -50,5 +51,8 @@
   }
   .item p {
     margin: 6px 0px;
+  }
+  .item img {
+    width: 100%;
   }
 }
