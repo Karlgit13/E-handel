@@ -16,7 +16,7 @@ const Product = () => {
       <Breadcrum product={product} />
       <ProductDisplay product={product} />
       <DescriptionBox />
-      <RelatedProducts />
+      <RelatedProducts currentCategory={product.category} />
     </div>
   );
 };
