@@ -18,12 +18,12 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <a href="/">
+        <Link to="/">
           <img className="navImg" src={logo} alt="logo" />
-        </a>
-        <a style={{ textDecoration: "none" }} href="/">
+        </Link>
+        <Link>
           <p className="nav-title">E-Commerce</p>
-        </a>
+        </Link>
       </div>
       <ul className="nav-menu">
         <li
