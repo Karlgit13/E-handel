@@ -1,17 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DescriptionBox.css";
 
 const DescriptionBox = () => {
+  const [toggleDiv, setToggleDiv] = useState(false);
+
+  const handleDiv = () => {
+    setToggleDiv(!toggleDiv);
+  };
+
   return (
     <div className="descriptionbox">
       <div className="descriptionbox-navigator">
-        <div className="descriptionbox-nav-box">Description</div>
-        <div className="descriptionbox-nav-box fade">Reviews (122)</div>
+        <div
+          onClick={handleDiv}
+          className={`descriptionbox-nav-box ${toggleDiv ? "" : "fade"}`}
+        >
+          Description
+        </div>
+        <div
+          onClick={() => setToggleDiv(false)}
+          className={`descriptionbox-nav-box ${!toggleDiv ? "" : "fade"}`}
+        >
+          Reviews (0)
+        </div>
       </div>
-      <div className="descriptionbox-description">
-        <p> Lorem Ipsum </p>
-        <p> Lorem Ipsum </p>
-      </div>
+      {toggleDiv ? (
+        <div className="descriptionbox-description">
+          <p>Description...</p>
+          <p>More description...</p>
+        </div>
+      ) : (
+        <div className="descriptionbox-description">
+          <p>Reviews...</p>
+          <p>More reviews...</p>
+        </div>
+      )}
     </div>
   );
 };
