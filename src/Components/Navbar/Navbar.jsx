@@ -21,7 +21,7 @@ const Navbar = () => {
         <Link to="/">
           <img className="navImg" src={logo} alt="logo" />
         </Link>
-        <Link>
+        <Link to="/">
           <p className="nav-title">E-Commerce</p>
         </Link>
       </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
       </ul>
       <div className="nav-login-cart">
         <Link to="/login">
-          <button>Login</button>
+        <button className="login-button">Login</button>
         </Link>
         <Link to="/cart">
           <img src={cart_icon} alt="cart icon" />

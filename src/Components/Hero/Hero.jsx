@@ -6,15 +6,13 @@ import hero_image from "../../Assets/hero_image.png";
 
 const Hero = () => {
   return (
-    
     <div className="hero">
       <div className="hero-left">
-        <h2>NEW ARRIVALS ONLY</h2>
         <div>
           <div className="hand-hand-icon">
-            <p>new</p>
-            <img className="heroImg" src={hand_icon} alt="handIcon" />
+            <img className="handImg" src={hand_icon} alt="handIcon" />
           </div>
+          <p>new</p>
           <p>collections</p>
           <p>for everyone</p>
         </div>
