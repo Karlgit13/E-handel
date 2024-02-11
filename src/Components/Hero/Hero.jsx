@@ -5,6 +5,12 @@ import arrow_icon from "../../Assets/arrow.png";
 import hero_image from "../../Assets/hero_image.png";
 
 const Hero = () => {
+
+  const scrollThingy = () => {
+    const newCollectionsDiv = document.querySelector(".new-collections");
+    newCollectionsDiv.scrollIntoView({behavior: "smooth"})
+  }
+
   return (
     <div className="hero">
       <div className="hero-left">
@@ -16,10 +22,10 @@ const Hero = () => {
           <p>collections</p>
           <p>for everyone</p>
         </div>
-        <div className="hero-latest-btn">
-          <div>Latest Collection</div>
+        <button onClick={scrollThingy} className="hero-latest-btn">
+          <div>Latest</div>
           <img src={arrow_icon} alt="arrowIcon" />
-        </div>
+        </button>
       </div>
       <div className="hero-right">
         <img className="heroImg" src={hero_image} alt="heroImage" />

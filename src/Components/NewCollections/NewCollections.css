@@ -45,9 +45,9 @@
     display: none;
   }
   .collections {
-    max-width: 100%;
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 48vw 48vw;
+    gap: 5px;
     margin-top: 50px;
     box-sizing: border-box;
   }

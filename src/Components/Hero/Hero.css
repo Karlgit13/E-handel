@@ -9,8 +9,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20px;
-    padding-left: 180px;
     line-height: 1.1;
   }
   .hero-left p {
@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 310px;
+    width: 341px;
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
@@ -66,11 +66,24 @@
     padding: 25px 0;
     margin: 0;
   }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .hero-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .heroImg {
     width: 100px;
   }
   .handImg {
-    width: 50px;
+    width: 45px;
     margin-top: 30px;
   }
   .hero-left p {
@@ -80,18 +93,22 @@
     text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
   }
   .hero-latest-btn {
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
     border-radius: 75px;
-    margin-top: 3rem;
     background: #ff4141;
     color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 12px;
-    width: 180px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px;
+    margin-top: 15px;
+    width: 128px;
     box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+  }
+  .hero-latest-btn img {
+    width: 15px;
   }
 }
