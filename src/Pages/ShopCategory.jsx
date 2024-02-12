@@ -19,7 +19,7 @@ const ShopCategory = (props) => {
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
-        <button onClick={toggleSort} className="shopcategory-sort">
+        <div onClick={toggleSort} className="shopcategory-sort">
           sort by <img src={dropdown_icon} alt="dropdown" />
           {isOpen && (
             <div className="dropdown-div">
@@ -28,7 +28,7 @@ const ShopCategory = (props) => {
             <button>Highest Price</button>
           </div>
           )}
-        </button>
+        </div>
       </div>
       <div className="shopcategory-products">
         {all_product.map((item, i) => {
