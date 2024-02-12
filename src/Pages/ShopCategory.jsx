@@ -1,10 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import dropdown_icon from "../Assets/dropdown_icon.png";
 import Item from "../Components/Item/Item";
 
 const ShopCategory = (props) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSort = () => {
+    setIsOpen(!isOpen)
+  };
+
   const { all_product } = useContext(ShopContext);
   return (
     <div className="shop-category">
@@ -13,9 +19,16 @@ const ShopCategory = (props) => {
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
-        <div className="shopcategory-sort">
+        <button onClick={toggleSort} className="shopcategory-sort">
           sort by <img src={dropdown_icon} alt="dropdown" />
-        </div>
+          {isOpen && (
+            <div className="dropdown-div">
+            <button>Most Popular</button>
+            <button>Lowest Price</button>
+            <button>Highest Price</button>
+          </div>
+          )}
+        </button>
       </div>
       <div className="shopcategory-products">
         {all_product.map((item, i) => {
