@@ -1,8 +1,12 @@
 @media (min-width: 992px) {
-  .shopcategory-banner {
-    display: block;
-    margin: 30px auto;
-    width: 82%;
+  .shop-category {
+    width: 100vw;
+  }
+  .shop-category-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   .shopcategory-indexSort {
     display: flex;
@@ -10,6 +14,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
+    max-width: 2000px;
   }
   .shopcategory-sort {
     padding: 16px;
@@ -30,11 +35,14 @@
     font-weight: 600;
   }
   .shopcategory-products {
-    margin: 20px 170px;
+    margin: 20px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
     row-gap: 80px;
+    place-items: center;
+    width: 70vw;
   }
+
   .shopcategory-loadmore {
     display: flex;
     justify-content: center;
@@ -68,6 +76,7 @@
     border-radius: 10px;
     font-size: 1.1rem;
     cursor: pointer;
+    color: black;
   }
   .dropdownIcon {
     width: 25px;
@@ -130,7 +139,6 @@
     border-radius: 10px;
     cursor: pointer;
     width: 120px;
-    
   }
   .dropdown-div button {
     padding: 8px;
@@ -139,7 +147,6 @@
     border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
-    
+    color: black;
   }
-  
 }

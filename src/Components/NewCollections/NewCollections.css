@@ -18,10 +18,12 @@
     background: #252525;
   }
   .collections {
+    width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    place-content: center;
+    place-items: center;
     margin-top: 50px;
-    gap: 30px;
   }
 }
 

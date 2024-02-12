@@ -4,7 +4,9 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    height: 100%;
+    width: 100vw;
+    margin-bottom: 250px;
   }
   .popular h1 {
     color: #171717;
@@ -19,8 +21,12 @@
   }
   .popular-item {
     margin-top: 50px;
-    display: flex;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    row-gap: 80px;
+    place-content: center;
+    place-items: center;
+    width: 100vw;
   }
 }
 
