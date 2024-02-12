@@ -3,11 +3,12 @@ import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import dropdown_icon from "../Assets/dropdown_icon.png";
 import Item from "../Components/Item/Item";
+import arrow_icon from "../Assets/arrow.png";
 
 const ShopCategory = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [sortedProducts, setSortedProducts] = useState([]);
-
+  const [currentSortOption, setCurrentSortOption] = useState("");
   const { all_product } = useContext(ShopContext);
 
   const toggleSort = () => {
@@ -19,6 +20,7 @@ const ShopCategory = (props) => {
       .filter((item) => item.category === props.category)
       .sort((a, b) => b.fake_ratings - a.fake_ratings);
     setSortedProducts(filteredAndSorted);
+    setCurrentSortOption("Most Popular");
   };
 
   const sortLowestPrices = () => {
@@ -26,6 +28,7 @@ const ShopCategory = (props) => {
       .filter((item) => item.category === props.category)
       .sort((a, b) => a.new_price - b.new_price);
     setSortedProducts(lowestPrices);
+    setCurrentSortOption("Lowest Price");
   };
 
   const sortHighestPrices = () => {
@@ -33,6 +36,7 @@ const ShopCategory = (props) => {
       .filter((item) => item.category === props.category)
       .sort((a, b) => b.new_price - a.new_price);
     setSortedProducts(highestPrices);
+    setCurrentSortOption("Highest Price");
   };
 
   useEffect(() => {
@@ -49,7 +53,8 @@ const ShopCategory = (props) => {
           <span>Showing 1-12</span> out of 36 products
         </p>
         <div onClick={toggleSort} className="shopcategory-sort">
-          sort by <img src={dropdown_icon} alt="dropdown" />
+          {currentSortOption ? `${currentSortOption}` : "Sort by "}
+          <img className="dropdownIcon" src={dropdown_icon} alt="sort icon" />
           {isOpen && (
             <div className="dropdown-div">
               <button onClick={sortFakeMostPopular}>Most Popular</button>
