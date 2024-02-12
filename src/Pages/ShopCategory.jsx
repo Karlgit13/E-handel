@@ -3,7 +3,6 @@ import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import dropdown_icon from "../Assets/dropdown_icon.png";
 import Item from "../Components/Item/Item";
-import arrow_icon from "../Assets/arrow.png";
 
 const ShopCategory = (props) => {
   const [isOpen, setIsOpen] = useState(false);
