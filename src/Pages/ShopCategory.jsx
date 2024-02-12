@@ -5,7 +5,7 @@ import dropdown_icon from "../Assets/dropdown_icon.png";
 import Item from "../Components/Item/Item";
 
 const ShopCategory = (props) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [sortedProducts, setSortedProducts] = useState([]);
 
   const { all_product } = useContext(ShopContext);
@@ -32,7 +32,7 @@ const ShopCategory = (props) => {
     const highestPrices = [...all_product]
       .filter((item) => item.category === props.category)
       .sort((a, b) => b.new_price - a.new_price);
-      setSortedProducts(highestPrices)
+    setSortedProducts(highestPrices);
   };
 
   useEffect(() => {
