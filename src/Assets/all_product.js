@@ -344,5 +344,4 @@ function getFakeRatings(min, max) {
   });
 
 
-
 export default all_product;
