@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./DescriptionBox.css";
+
 
 const DescriptionBox = () => {
   const [toggleDiv, setToggleDiv] = useState(false);
